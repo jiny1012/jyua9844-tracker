@@ -1,13 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Hello, world!</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
-</head>
-<body>
-  <h1>Hello, world!</h1>
-</body>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>index</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+
+	</head>
+	<body>
+		<nav class="site-header sticky-top py-1">
+			<div class="container d-flex flex-column flex-md-row justify-content-sm-start">
+				<a class="py-3 " href="#" aria-label="Product">
+					<h1>Drill Tracker</h1>
+				</a>
+				<a class="py-5  col-6 d-none d-md-inline-block" href="index.html">
+					Record and track your tennis training program
+				</a>
+			</div>
+		</nav>
+
+		<div class="wrap">
+			<div class="fomms  justify-content-center">
+				<form>
+					<div class="dui">
+						<div class="col-6" style="margin-right: 2rem;">
+							<div class="form-group ">
+								<h4>INPUT YOUR DRIll HERE</h4>
+							</div>
+							<div class="form-group ">
+								<label for="inputEmail4">Name</label>
+								<input type="name" class="form-control" id="inputEmail4">
+							</div>
+
+							<div class="form-group ">
+								<label for="inputCotegory">Cotegory</label>
+								<select id="inputCotegory" class="form-control">
+									<option selected>Groundstroke</option>
+									<option>Serve and Receive</option>
+									<option>footwork</option>
+									<option>Fitness</option>
+									<option>Others</option>
+								</select>
+							</div>
+
+							<div class="form-group ">
+								<label for="inputPurpose">Purpose</label>
+								<select id="inputPurpose" class="form-control">
+									<option selected>Agility</option>
+									<option>Accuracy</option>
+									<option>fitness</option>
+									<option>Endurance</option>
+								</select>
+							</div>
+
+							<div class="form-group ">
+								<label for="inputTime">Time</label>
+								<input type="text" class="form-control" id="inputTime">
+							</div>
+							<div class="form-group col-12">
+								<button type="submit" style="float: right;background-color: #bfe95f;
+	border: none;color: #323d18;font-weight: bold;" class="btn btn-primary ">Complete</button>
+							</div>
+						</div>
+						<div class="col-6" style="margin-top: 5rem;">
+							<div class="form-group">
+								<h4>TODAY'S FINISHED TRAINING</h4>
+							</div>
+							<div class="form-group  ">
+								<label for="inputRally">Rally</label>
+								<select id="inputRally" class="form-control">
+									<option selected>xx</option>
+									<option>yy</option>
+								</select>
+
+							</div>
+							<div class="form-group">
+								<label for="inputServe">Second Serve</label>
+								<select id="inputServe" class="form-control">
+									<option selected>xx</option>
+									<option>yy</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="inputSlipstep">Slipstep</label>
+								<select id="Slipstep" class="form-control">
+									<option selected>xx</option>
+									<option>yy</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+
+				</form>
+
+			</div>
+		</div>
+		<div class="form-group" style="display: flex;justify-content: center;">
+			<p class="head">View Training Summaries</p>
+		</div>
+		<div class="form-group col-12" style="display: flex;justify-content: center;">
+			<button type="submit" class="btn btn-primary" style="background-color: #bfe95f;
+	border: none;color: #323d18;font-weight: bold;">By Category</button>
+		</div>
+
+		<div class="form-group col-12" style="display: flex;justify-content: center;">
+			<div class="wp">
+				<fieldset class="form-group row">
+
+					<div class="col-sm-12">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+								value="option1" checked>
+							<label class="form-check-label" for="gridRadios1">
+								Groundstroke
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+								value="option2">
+							<label class="form-check-label" for="gridRadios2">
+								Serve and Receive
+							</label>
+						</div>
+						<div class="form-check ">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+								value="option3">
+							<label class="form-check-label" for="gridRadios3">
+								Footwork
+							</label>
+						</div>
+						<div class="form-check ">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4"
+								value="option3">
+							<label class="form-check-label" for="gridRadios4">
+								Fitness
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="container">
+				<div class="footer-left">
+					<p>Copyright © 2023 · All Rights Reserved · My Website</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</body>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
 </html>
