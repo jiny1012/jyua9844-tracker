@@ -1,5 +1,9 @@
 # jyua9844-tracker
 
+## About the Interface Design 
+color used: C1E961, 0B1C2E, 1E2E3D, FFFFFF
+Basically,  the design of the components in the ,mobile version remains the same as the web version. However, the size and scale of the elements are different to fit the different screen sizes. 
+
  ## App Configuration 
  Screen Size for the application 
  2560 px x 1600 px for web version

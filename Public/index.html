@@ -7,7 +7,11 @@
 		<title>index</title>
 		<link rel="stylesheet" href="./css/bootstrap.min.css">
 		<link rel="stylesheet" href="./css/style.css">
-
+		<style>
+			.del{margin: 0 10px;color: #fff;cursor: pointer;}
+			.delBox{background: #bfe95f;margin-bottom: 5px;font-family: sans-serif;}
+			.abtn{padding: 5px;border-radius: 3px;}
+		</style>
 	</head>
 	<body>
 		<nav class="site-header sticky-top py-1">
@@ -23,7 +27,7 @@
 
 		<div class="wrap">
 			<div class="fomms  justify-content-center">
-				<form>
+				<form id="myForm">
 					<div class="dui">
 						<div class="col-6" style="margin-right: 2rem;">
 							<div class="form-group ">
@@ -60,37 +64,40 @@
 								<input type="text" class="form-control" id="inputTime">
 							</div>
 							<div class="form-group col-12">
-								<button type="submit" style="float: right;background-color: #bfe95f;
-	border: none;color: #323d18;font-weight: bold;" class="btn btn-primary ">Complete</button>
+								<div  class="abtn" style="float: right;background-color: #bfe95f;
+	border: none;color: #323d18;font-weight: bold;" class="btn btn-primary ">Complete</div>
 							</div>
 						</div>
 						<div class="col-6" style="margin-top: 5rem;">
 							<div class="form-group">
 								<h4>TODAY'S FINISHED TRAINING</h4>
 							</div>
-							<div class="form-group  ">
-								<label for="inputRally">Rally</label>
+							<div class="form-group  rightBox">
+								<div>
+									
+								</div>
+								<!-- <label for="inputRally">Rally</label>
 								<select id="inputRally" class="form-control">
-									<option selected>xx</option>
-									<option>yy</option>
+									<option selected>inland</option>
+									<option>abroad</option>
 								</select>
-
+ -->
 							</div>
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<label for="inputServe">Second Serve</label>
 								<select id="inputServe" class="form-control">
-									<option selected>xx</option>
-									<option>yy</option>
+									<option selected>inland</option>
+									<option>abroad</option>
 								</select>
 							</div>
 
 							<div class="form-group">
 								<label for="inputSlipstep">Slipstep</label>
 								<select id="Slipstep" class="form-control">
-									<option selected>xx</option>
-									<option>yy</option>
+									<option selected>inland</option>
+									<option>abroad</option>
 								</select>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
@@ -157,3 +164,23 @@
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 </html>
+<script>
+	// 添加
+	$(".abtn").click(function(){
+		var a = $("#inputEmail4").val(); //Name
+		var b = $("#inputCotegory").val();//Cotegory
+		var c = $("#inputPurpose").val();//Purpose
+		var inputTime= $("#inputTime").val();//Time
+		var h ='<div class="clearfix delBox"> Name:'+a+',",Cotegory:"'+b+',",Purpose:"'+c+',",Time:"'+inputTime+'<span class="del"> delete </span></div>'
+		$('.rightBox').append(h)
+	})
+	
+	
+	// 删除
+	$(document).ready(function(){
+		$('.rightBox').on('click', '.delBox', function(){
+		  $(this).remove()
+		});
+	});
+	
+</script>
