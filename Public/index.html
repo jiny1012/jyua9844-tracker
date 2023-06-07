@@ -1,5 +1,9 @@
+<!--
+	This html file defines the main interface layout required by the system, including text area and multi-line theme layout and button area. This file uses the
+    js, css and other files, each folder is necessary, and need to use the same syntax or semantics to define the control position. 
+-->
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en"> 
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +17,9 @@
 			.abtn{padding: 5px;border-radius: 3px;}
 		</style>
 	</head>
-	<body>
+	<body>  
+		
+
 		<nav class="site-header sticky-top py-1">
 			<div class="container d-flex flex-column flex-md-row justify-content-sm-start">
 				<a class="py-3 " href="#" aria-label="Product">
@@ -24,7 +30,7 @@
 				</a>
 			</div>
 		</nav>
-
+		<!--The most critical part of the interface is to interact with the user. The user can input information, and the information can be displayed on the page by clicking the button, and the user can delete the added information by himself-->
 		<div class="wrap">
 			<div class="fomms  justify-content-center">
 				<form id="myForm">
@@ -76,44 +82,24 @@
 								<div>
 									
 								</div>
-								<!-- <label for="inputRally">Rally</label>
-								<select id="inputRally" class="form-control">
-									<option selected>inland</option>
-									<option>abroad</option>
-								</select>
- -->
-							</div>
-							<!-- <div class="form-group">
-								<label for="inputServe">Second Serve</label>
-								<select id="inputServe" class="form-control">
-									<option selected>inland</option>
-									<option>abroad</option>
-								</select>
-							</div>
 
-							<div class="form-group">
-								<label for="inputSlipstep">Slipstep</label>
-								<select id="Slipstep" class="form-control">
-									<option selected>inland</option>
-									<option>abroad</option>
-								</select>
-							</div> -->
+							</div>
 						</div>
 					</div>
-
-
 				</form>
 
 			</div>
 		</div>
+		<!--定义了View Training Summaries等信息-->
 		<div class="form-group" style="display: flex;justify-content: center;">
 			<p class="head">View Training Summaries</p>
 		</div>
+	
 		<div class="form-group col-12" style="display: flex;justify-content: center;">
 			<button type="submit" class="btn btn-primary" style="background-color: #bfe95f;
 	border: none;color: #323d18;font-weight: bold;">By Category</button>
 		</div>
-
+		
 		<div class="form-group col-12" style="display: flex;justify-content: center;">
 			<div class="wp">
 				<fieldset class="form-group row">
@@ -151,7 +137,7 @@
 				</fieldset>
 			</div>
 		</div>
-
+		<!--界面末尾定义网站 地址 等信息展示-->
 		<div class="footer">
 			<div class="container">
 				<div class="footer-left">
@@ -161,22 +147,23 @@
 			</div>
 		</div>
 	</body>
+	<!--insert js file-->
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 </html>
 <script>
-	// 添加
+	// By clicking the button, process the information inputted by the user, save the information in the container, and display it on the interface
 	$(".abtn").click(function(){
 		var a = $("#inputEmail4").val(); //Name
-		var b = $("#inputCotegory").val();//Cotegory
+		var b = $("#inputCotegory").val();//Category
 		var c = $("#inputPurpose").val();//Purpose
 		var inputTime= $("#inputTime").val();//Time
-		var h ='<div class="clearfix delBox"> Name:'+a+',",Cotegory:"'+b+',",Purpose:"'+c+',",Time:"'+inputTime+'<span class="del"> delete </span></div>'
+		var h ='<div class="clearfix delBox"> Name:'+a+',",Cotegory:"'+b+',",Purpose:"'+c+',",Time:"'+inputTime+'<span class="del">delete</span></div>'
 		$('.rightBox').append(h)
 	})
 	
 	
-	// 删除
+	// delete 
 	$(document).ready(function(){
 		$('.rightBox').on('click', '.delBox', function(){
 		  $(this).remove()
